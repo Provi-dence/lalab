@@ -1,0 +1,140 @@
+/* General styles for canvas and text */
+canvas {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+p {
+	margin: 0;
+	position: absolute;
+	font: 16px Verdana;
+	color: #eee;
+	height: 25px;
+	top: calc(100vh - 30px);
+	text-shadow: 0 0 2px white;
+	width: 100%;
+	text-align: center;
+}
+
+p a {
+	text-decoration: none;
+	color: #aaa;
+}
+
+span {
+	font-size: 11px;
+}
+
+p > a:first-of-type {
+	font-size: 20px;
+}
+
+/* Ensure body doesn't overflow */
+body {
+	overflow: hidden;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+	/* For tablets and smaller screens */
+	p {
+		font-size: 14px; /* Slightly smaller font on smaller screens */
+		height: 20px; /* Adjust height for text */
+		top: calc(100vh - 25px); /* Adjust position for smaller screens */
+	}
+
+	span {
+		font-size: 9px; /* Smaller font for span */
+	}
+
+	p > a:first-of-type {
+		font-size: 18px; /* Smaller font size for first link */
+	}
+}
+
+@media (max-width: 480px) {
+	/* For mobile devices */
+	p {
+		font-size: 12px; /* Further reduce font size */
+		height: 18px; /* Adjust height further */
+		top: calc(100vh - 20px); /* Adjust text position */
+	}
+
+	span {
+		font-size: 8px; /* Make span even smaller */
+	}
+
+	p > a:first-of-type {
+		font-size: 16px; /* Further reduce the size of the first link */
+	}
+}
+
+@media (max-width: 360px) {
+	/* For very small mobile devices */
+	p {
+		font-size: 10px; /* Minimize font size for tiny screens */
+		height: 16px; /* Adjust height further */
+		top: calc(100vh - 18px); /* Adjust for even smaller screens */
+	}
+
+	span {
+		font-size: 7px; /* Smallest span font size */
+	}
+
+	p > a:first-of-type {
+		font-size: 14px; /* Minimize size for the first link */
+	}
+}
+
+/* Floating image container */
+.floating-images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Allows clicks to pass through */
+}
+
+/* Individual floating image */
+.floating-image {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    opacity: 0.8;
+    animation: floatUp 10s infinite ease-in-out;
+}
+
+/* Animate the floating images from bottom to top */
+@keyframes floatUp {
+    0% {
+        transform: translateY(100vh); /* Start from bottom */
+    }
+    50% {
+        transform: translateY(-50vh); /* Move up a bit */
+    }
+    100% {
+        transform: translateY(-100vh); /* Move completely off the top */
+    }
+}
+
+/* Floating images with different animation durations for variety */
+.floating-image:nth-child(1) {
+    top: 50%;
+    left: 10%;
+    animation-duration: 12s; /* Longer duration */
+}
+
+.floating-image:nth-child(2) {
+    top: 20%;
+    left: 30%;
+    animation-duration: 14s; /* Even longer duration */
+}
+
+.floating-image:nth-child(3) {
+    top: 50%;
+    left: 80%;
+    animation-duration: 16s; /* Longest duration */
+}

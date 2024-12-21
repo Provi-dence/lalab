@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Happy Birthday</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+</head>
+
+<body>
+    <canvas id="c"></canvas>
+    <p>
+        <a href="">create</a><span>, by <a href="">Jundrel Alonzo</a></span>
+    </p>
+
+    <div class="floating-images">
+        <img class="floating-image" src="assets/images/1.jpg" alt="Photo 1" />
+        <img class="floating-image" src="assets/images/2.jpg" alt="Photo 2" />
+        <img class="floating-image" src="assets/images/3.jpg" alt="Photo 3" />
+    </div>
+
+    <audio id="background-music" autoplay loop>
+        <source src="assets/audio/palagi.mp3" type="audio/mp3">
+    </audio>
+
+
+    <script>
+        window.onload = function() {
+            var audio = document.getElementById("background-music");
+            audio.play(); // Play the audio once the page is loaded
+            audio.muted = false; // Unmute the audio after it starts playing
+        };
+    </script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
